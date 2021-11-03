@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create service</title>
+</head>
+<body>
+
+    <h1>Creating your service has never been so easy:</h1>
+    <img th:src="@{/images/carService.png}" width="320" height="250"/>
+
+    <form class="group" th:method="POST" th:action="@{/services/createService?serviceType=passenger}" th:object="${service}">
+
+		<p>Enter initial information about your service:</p>
+
+        <label for="serviceName">Name:</label>
+		<br>
+        <input type="text" th:field="*{serviceName}" id="serviceName"/>
+        <br>
+
+        <label for="serviceAddress">Address:</label>
+		<br>
+        <input type="text" th:field="*{serviceAddress}" id="serviceAddress"/>
+        <br>
+
+        <label for="phoneNumber">Phone number:</label>
+		<br>
+        <input type="text" th:field="*{phoneNumber}" id="phoneNumber"/>
+        <br>
+
+        <label for="maxCountCarsInService">Count cars in service (MAX):</label>
+		<br>
+        <input type="text" th:field="*{maxCountCarsInService}" id="maxCountCarsInService"/>
+        <br>
+
+        <label for="timeCarInService">Time car in service:</label>
+		<br>
+        <input type="text" th:field="*{timeCarInService}" id="timeCarInService"/>
+        <br>
+
+        <label for="maximumWeight">Maximum weight:</label>
+        <br>
+        <input type="text" th:field="*{maximumWeight}" id="maximumWeight"/>
+        <br>
+
+        <label for="minimumYearProduction">Minimum year production:</label>
+        <br>
+        <input type="text" th:field="*{minimumYearProduction}" id="minimumYearProduction"/>
+        <br>
+
+        <p>Enter specific option for your service:</p>
+
+        <input type="checkbox" th:field="*{possibilityRecordByPhone}" id="possibilityRecordByPhone"/>
+        <label for="possibilityRecordByPhone">Possibility record by phone</label>
+        <br>
+
+
+		<p>The last step to create your service:</p>
+
+        <input type="submit" value="Create your service !!!">
+
+    </form>
+
+</body>
+</html>

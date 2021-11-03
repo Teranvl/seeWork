@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Home page for Services</title>
+</head>
+<body>
+    <h2>Hello from Services</h2>
+
+    <img th:src="@{/images/all.png}" width="320" height="250"/>
+
+    <a th:href="@{/services/createPassengerCarService}">
+        <h2>To create your passenger car service =></h2>
+    </a>
+
+    <a th:href="@{/services/createTrailerService}">
+        <h2>To create your trailer service =></h2>
+    </a>
+
+    <a th:href="@{/services/createBusService}">
+        <h2>To create your bus service =></h2>
+    </a>
+
+
+    <p>Services in our city:</p>
+
+    <div th:each="service : ${services}">
+
+        <a th:href="@{/services/{id} (id = ${service.getId})}" th:text="${service.getServiceName()}"></a>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Service page</title>
+</head>
+<body>
+
+        <label for="id">id: </label>
+        <a id="id" th:text="${service.getId()}"></a>
+        <br>
+
+        <label for="name">Name: </label>
+        <a id="name" th:text="${service.getServiceName()}"></a>
+        <br>
+
+        <label for="PhoneNumber">Phone Number: </label>
+        <a id="PhoneNumber" th:text="${service.getPhoneNumber()}"></a>
+        <br>
+
+        <label for="ServiceAddress">Service Address: </label>
+        <a id="ServiceAddress" th:text="${service.getServiceAddress()}"></a>
+        <br>
+
+        <label for="MaxCountCarsInService">Max Count Cars In Service: </label>
+        <a id="MaxCountCarsInService" th:text="${service.getMaxCountCarsInService()}"></a>
+        <br>
+
+        <label for="TimeCarInService">Time Car In Service: </label>
+        <a id="TimeCarInService" th:text="${service.getTimeCarInService()}"></a>
+        <br>
+
+        <div th:each="String : ${specialOptions}">
+             <a  th:text="${String}"></a>
+        </div>
+
+        <p>For start imitation work your service, please enter count cars into service in turn and click button:</p>
+
+        <form th:method="POST" th:action="@{/services/imitation}" >
+                <input name="idService" type="text" th:value="${service.getId()}" id="idService" hidden="true">
+
+                <label for="carsIntoServiceInTurn">Cars into service in turn: </label>
+                <br>
+
+                <input name="carsIntoServiceInTurn" type="text" value="10" id="carsIntoServiceInTurn">
+                <br>
+                <br>
+
+                <input type="submit" value="Start imitation!">
+        </form>
+
+
+
+
+
+</body>
+</html>

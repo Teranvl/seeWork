@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="windows-1251">
+    <title>imitation page</title>
+</head>
+<body>
+
+    <p>Imitation successful! Imitation protocol: </p>
+
+    <div th:each="String : ${imitationProtocol}">
+
+        <a th:text="${String}"></a>
+
+    </div>
+
+
+</body>
+</html>
