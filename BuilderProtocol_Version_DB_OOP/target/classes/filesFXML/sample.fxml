@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="741.0" style="-fx-background-color: #87CEFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controller">
+   <children>
+      <Label fx:id="LabelPathToOpen" alignment="TOP_CENTER" layoutX="640.0" layoutY="199.0" prefHeight="30.0" prefWidth="77.0" text="ОШИБКА" textFill="RED" AnchorPane.leftAnchor="640.0" AnchorPane.topAnchor="199.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="LabelPathToSave" alignment="TOP_CENTER" layoutX="640.0" layoutY="168.0" prefHeight="30.0" prefWidth="77.0" text="ОШИБКА" textFill="RED" AnchorPane.leftAnchor="640.0" AnchorPane.topAnchor="168.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelCreateProtocols" alignment="TOP_CENTER" layoutX="640.0" layoutY="262.0" prefHeight="30.0" prefWidth="77.0" text="ОШИБКА" textFill="RED" AnchorPane.leftAnchor="640.0" AnchorPane.topAnchor="262.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="199.0" text="Протоколы Recorder выбраны:" textFill="#2e3348" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="199.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="7.0" layoutY="574.0" prefHeight="16.0" prefWidth="130.0" text="Папка для сохранения:" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="574.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="680.0" layoutY="581.0" text="Pre-Alfa_v1" textFill="#532ddd" />
+      <Label fx:id="LabelSave" layoutX="124.0" layoutY="574.0" prefHeight="16.0" prefWidth="478.0" text="не выбрана" AnchorPane.leftAnchor="124.0" AnchorPane.topAnchor="574.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelTime" layoutX="375.0" layoutY="517.0" prefHeight="26.0" prefWidth="364.0" text="Время выполнения:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="textAreaInfo" editable="false" layoutX="7.0" layoutY="135.0" prefHeight="433.0" prefWidth="364.0" promptText="Выбранные протоколы:" />
+      <ProgressBar fx:id="progressBarForProtocols" depthTest="DISABLE" layoutX="375.0" layoutY="543.0" pickOnBounds="false" prefHeight="25.0" prefWidth="364.0" progress="0.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <SepiaTone level="0.55" />
+         </effect>
+      </ProgressBar>
+      <MenuBar fx:id="menuBar" opacity="0.78" prefHeight="25.0" prefWidth="741.0">
+        <menus>
+          <Menu fx:id="menu" mnemonicParsing="false" text="Меню">
+            <items>
+              <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" text="Закрыть" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuHelp" mnemonicParsing="false" text="Дополнительно">
+            <items>
+              <MenuItem fx:id="clearProtocolsListMenu" mnemonicParsing="false" text="Очистить список протоколов" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="374.0" layoutY="167.0" prefHeight="27.0" prefWidth="264.0" text="БД преобразователей выбрана:" textFill="#2e3348" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="167.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="LabelDataBase" alignment="TOP_CENTER" layoutX="656.0" layoutY="231.0" prefHeight="30.0" prefWidth="77.0" text="ОШИБКА" textFill="RED" AnchorPane.leftAnchor="640.0" AnchorPane.topAnchor="231.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="375.0" layoutY="230.0" prefHeight="27.0" prefWidth="255.0" text="Путь для сохранения выбран:" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="230.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="375.0" layoutY="260.0" prefHeight="27.0" prefWidth="215.0" text="Готов к формированию: " textFill="#2e3348" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="260.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <AnchorPane blendMode="SRC_ATOP" layoutY="25.0" prefHeight="98.0" prefWidth="741.0" style="-fx-background-color: #2E3348;">
+         <children>
+            <Button fx:id="buttonSave" layoutX="459.0" layoutY="56.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="206.0" text="Выбрать папку для сохранения" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="56.0" />
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="17.0" prefHeight="27.0" prefWidth="196.0" text="№ Сертификата:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldCertificate" alignment="TOP_CENTER" layoutX="13.0" layoutY="57.0" prefHeight="30.0" prefWidth="206.0" promptText="700-412-2020" text="700-412-2020" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="57.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="268.0" layoutY="17.0" prefHeight="27.0" prefWidth="206.0" text="База данных:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="measuringInstrumentList" layoutX="273.0" layoutY="57.0" prefHeight="30.0" prefWidth="196.0" />
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="459.0" layoutY="17.0" prefHeight="27.0" prefWidth="206.0" text="Папка для сохранения:" textFill="WHITE" AnchorPane.rightAnchor="13.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="382.0" layoutY="135.0" prefHeight="27.0" prefWidth="351.0" text="Готовность программы к работе:" textFill="#0736dd" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonCreateProtocols" layoutX="447.0" layoutY="331.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="222.0" text="Сформировать протоколы" AnchorPane.topAnchor="331.0">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
