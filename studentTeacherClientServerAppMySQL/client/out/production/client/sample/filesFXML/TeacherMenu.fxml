@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="253.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.TeacherController">
+   <children>
+      <Button fx:id="buttonCreateSubject" layoutX="140.0" layoutY="197.0" mnemonicParsing="false" text="Создать дисциплину в БД" />
+      <Label layoutX="133.0" layoutY="8.0" text="Меню преподавателя" textAlignment="CENTER" underline="true">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonAddStudent" layoutX="119.0" layoutY="160.0" mnemonicParsing="false" text="Добавить студента к дисциплине" />
+      <Button fx:id="buttonPoints" layoutX="116.0" layoutY="123.0" mnemonicParsing="false" text="Проставить баллы по дисциплине" />
+      <TextField fx:id="subjectNameField" layoutX="144.0" layoutY="65.0" promptText="Название дисциплины" />
+      <Label layoutX="131.0" layoutY="40.0" text="Введите название дисциплины:" />
+      <Label layoutX="164.0" layoutY="98.0" text="Выберете действие:" />
+      <Label fx:id="labelInfo" alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="230.0" prefHeight="17.0" prefWidth="423.0" />
+   </children>
+</AnchorPane>

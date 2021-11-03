@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.StudentsStatusController">
+   <children>
+      <Label layoutX="198.0" layoutY="2.0" text="Меню контрольных точек">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TableView fx:id="tableView" layoutX="8.0" layoutY="30.0" prefHeight="329.0" prefWidth="599.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="32.0" text="ID" />
+          <TableColumn fx:id="firstNameColumn" prefWidth="100.0" text="Имя" />
+            <TableColumn fx:id="lastNameColumn" prefWidth="117.0" text="Фамилия" />
+            <TableColumn fx:id="controlPointsColumn" prefWidth="295.0" text="Контрольные точки" />
+            <TableColumn fx:id="totalScoreColumn" prefWidth="54.0" text="Рейтинг" />
+        </columns>
+      </TableView>
+      <Button fx:id="closeButton" layoutX="342.0" layoutY="399.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="265.0" text="В главное меню" />
+      <Button fx:id="sendButton" layoutX="342.0" layoutY="364.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="265.0" text="Выполнить запрос в БД" />
+      <Label layoutX="9.0" layoutY="369.0" text="Введите название дисциплины" />
+      <TextField fx:id="subjectNameField" layoutX="185.0" layoutY="366.0" promptText="Название" />
+      <Label fx:id="labelInfo" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="405.0" prefHeight="17.0" prefWidth="318.0" />
+   </children>
+</AnchorPane>
